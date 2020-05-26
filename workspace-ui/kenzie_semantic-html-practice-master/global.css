@@ -1,0 +1,162 @@
+html {
+    font-size: 16px;
+    font-size: 1rem;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body > * {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    text-transform: capitalize;
+}
+ul, p {
+    margin: 0;
+}
+p {
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    transition: opacity .15s ease-in-out;
+    font-weight: 600;
+    color: inherit;
+}
+a:hover {
+    opacity: .70;
+}
+img {
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1200px;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section {
+    margin-bottom: 90px;
+}
+.hero {
+    background-color: rgba(0,0,0,0.6);
+    background-image: url('images/hero.jpg');
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45vh;
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.nav {
+    position: absolute;
+    z-index: 1000;
+    max-width: 100%;
+    top: 0;
+    padding-top: 25px;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.nav li {
+    padding: 0 15px;
+}
+.body p {
+    max-width: 650px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar li {
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+.soup {
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column; 
+    margin: 0 0 45px; 
+    transition: box-shadow .15s ease-in-out;
+}
+.soup:hover  {
+    cursor: pointer;
+    box-shadow: 1px 1px 35px rgba(0,0,0,0.17);
+}
+.soup .image-wrapper img {
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+}
+.soup .content {
+    padding: 20px;
+}
+.soup .content p {
+    line-height: 1.25;
+}
+.footer {
+    margin-bottom: 60px;
+}
+.footer > * {
+    font-size: .8rem;
+    color: gray;
+}
+.footer .row > div {
+    margin-bottom: 30px;
+}
+.footer-links a{
+    display: block;
+    margin-bottom: 10px;
+}
+@media (min-width: 650px) {
+    html, body {
+        font-size: 1.125rem;
+    }
+    .container {
+        padding: 0 60px;
+    }
+    .row {
+        flex-direction: row;
+    }
+    .section {
+        margin-bottom: 190px;
+    }
+    .body {
+        padding-right: 45px;
+        margin-bottom: 0;
+    }
+    .soup {
+        margin: 0 15px 45px;
+    }
+    .soup > * {
+        font-size: 1rem;
+    }
+    .soup:nth-child(1) {
+        margin-left: 0;
+    }
+    .soup:nth-child(3) {
+        margin-right: 0;
+    }
+    .footer .row > div {
+        width: 33.33%;
+        margin-bottom: 0;
+    }
+    .address p {
+        text-align: right;
+        padding: 0 30px 0;
+    }
+}
