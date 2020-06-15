@@ -1,1 +1,99 @@
-b
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* $color-primary: #3260a8;
+$purple: #3234a8;
+$orange: #eb8034;
+$font-size-p: 1rem;
+$font-family: "Roboto", sans-serif; */
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.meet-container {
+  display: grid;
+  grid-template-columns: 700px;
+  grid-template-rows: 100px;
+  justify-content: center;
+  width: 100%;
+  border: 3px dashed orange;
+}
+
+.read {
+  color: purple;
+  display: flex;
+  justify-content: center;
+}
+
+.teams-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.team-card {
+  display: grid;
+  justify-content: center;
+
+  border: 3px dashed orange;
+}
+
+.board-card {
+  display: grid;
+  justify-content: center;
+  border: 3px dashed orange;
+}
+
+.mentors-card {
+  display: grid;
+  justify-content: center;
+  border: 3px dashed orange;
+}
+
+.advisors-card {
+  display: grid;
+  justify-content: center;
+  border: 3px dashed orange;
+}
+
+.video-students-container {
+  display: grid;
+  margin-top: 20px;
+  padding: 20px;
+  justify-content: center;
+  width: 100%;
+  border: 3px dashed orange;
+}
+
+.video-students-container .video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.students {
+  display: flex;
+  justify-content: center;
+}
+
+.students-description {
+  display: flex;
+  justify-content: center;
+}
