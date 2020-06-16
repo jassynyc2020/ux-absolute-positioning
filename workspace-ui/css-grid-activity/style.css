@@ -77,15 +77,14 @@ h1 {
   display: grid;
   margin-top: 20px;
   padding: 20px;
-  justify-content: center;
   width: 100%;
   border: 3px dashed orange;
 }
 
-.video-students-container .video {
+.video-students-container > .video {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
+
 }
 
 .students {
@@ -96,4 +95,10 @@ h1 {
 .students-description {
   display: flex;
   justify-content: center;
+ 
+}
+
+.students, h2 {
+  display: grid;
+  text-align: left;
 }
