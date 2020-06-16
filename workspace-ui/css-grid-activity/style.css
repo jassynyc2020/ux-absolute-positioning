@@ -23,6 +23,7 @@ h1 {
 .container {
   display: grid;
   grid-gap: 20px;
+  
 }
 
 .meet-container {
@@ -77,6 +78,7 @@ h1 {
   display: grid;
   margin-top: 20px;
   padding: 20px;
+
   width: 100%;
   border: 3px dashed orange;
 }
