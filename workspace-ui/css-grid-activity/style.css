@@ -1,106 +1,184 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-/* $color-primary: #3260a8;
-$purple: #3234a8;
-$orange: #eb8034;
-$font-size-p: 1rem;
-$font-family: "Roboto", sans-serif; */
-
-html,
+@font-face {
+  font-family: "roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+}
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  font-family: "roboto";
 }
 
 h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  text-align: center;
   font-size: 3rem;
 }
 
 .container {
   display: grid;
-  grid-gap: 20px;
-  
 }
 
-.meet-container {
+.meet-description {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 700px;
-  grid-template-rows: 100px;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  width: 100%;
-  border: 3px dashed orange;
+  width: 300px;
+  margin: 1em;
+  background-color: thistle;
 }
 
-.read {
+.meet-description > p {
+  text-align: center;
+}
+
+.meet-description > h4 {
   color: purple;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+}
+
+.members-wrapper {
+  display: grid;
+  /* flex-direction: row; */
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.members-wrapper > div {
+  padding: 10px;
+  flex: 1 1 25%;
+  flex-direction: row;
+}
+
+.team1,
+.team2,
+.team3,
+.team4 {
+  border: 1px solid green;
+  display: grid;
+}
+
+.row-person1,
+.row-person2 {
   display: flex;
   justify-content: center;
 }
 
-.teams-container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-gap: 20px;
-  justify-content: center;
-  width: 100%;
+h3 {
+  text-align: center;
+  font-weight: 900;
 }
 
-.team-card {
+.video-students-container {
+  display: -ms-grid;
   display: grid;
-  justify-content: center;
-
-  border: 3px dashed orange;
-}
-
-.board-card {
-  display: grid;
-  justify-content: center;
-  border: 3px dashed orange;
-}
-
-.mentors-card {
-  display: grid;
-  justify-content: center;
-  border: 3px dashed orange;
-}
-
-.advisors-card {
-  display: grid;
-  justify-content: center;
-  border: 3px dashed orange;
+  flex-direction: row;
+  border: 1px solid red;
 }
 
 .video-students-container {
   display: grid;
-  margin-top: 20px;
-  padding: 20px;
-
-  width: 100%;
-  border: 3px dashed orange;
-}
-
-.video-students-container > .video {
-  display: flex;
-  justify-content: flex-start;
-
-}
-
-.students {
-  display: flex;
-  justify-content: center;
 }
 
 .students-description {
-  display: flex;
-  justify-content: center;
- 
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  display: grid;
+  margin: 1em;
+  /* -webkit-box-pack: center;
+  -ms-flex-pack: center; */
+  /* justify-content: center; */
+  flex-direction: row;
 }
 
-.students, h2 {
-  display: grid;
+.students-description > h2 {
+  display: -ms-grid;
+  display: flex;
   text-align: left;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.students-description > p {
+  text-align: left;
+  width: 300px;
+}
+
+/* Tablet styles--------------- */
+@media (min-width: 550px) {
+  body,
+  .container {
+    flex-direction: column;
+  }
+  .members-wrapper {
+    display: flex;
+    padding: 10px;
+  }
+
+  .meet-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin: 1em;
+    background-color: thistle;
+  }
+  .video-students-container {
+    display: grid;
+  }
+
+  .video-students-container > img {
+    width: 550px;
+  }
+
+  .students-description > p {
+    width: 300px;
+  }
+}
+
+/* Deskstop styles------------- */
+@media (min-width: 990px) {
+  body,
+  .container {
+    flex-direction: column;
+  }
+  .meet-description {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 900px;
+    margin: 1em;
+    background-color: thistle;
+  }
+
+  .members-wrapper {
+    display: flex;
+    padding: 10px;
+  }
+
+  .video-students-container {
+    display: flex;
+  }
+
+  .video-students-container {
+    flex-direction: column;
+  }
+
+  .students-description > p {
+    width: 900px;
+  }
 }

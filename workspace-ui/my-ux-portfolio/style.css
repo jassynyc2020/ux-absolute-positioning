@@ -1,63 +1,119 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-/*# sourceMappingURL=style.css.map */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lobster"), local("Lobster-Regular"),
+    url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
+}
 
 body {
   box-sizing: border-box;
   background-color: navy;
-  font-family: "roboto";
+  font-family: "Roboto";
   color: white;
   margin: 0;
   padding: 0;
 }
 
 .header {
-    display: grid;
-    width: 100%;
-    background-color: #3679E3;
+  display: grid;
+  background-color: #3679e3;
 }
 
 nav {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    background-color: #76A3EC;
+  display: flex;
+  width: 10em;
 }
 
 ul {
-    list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+  list-style-type: none;
+}
+
+li > a {
+  color: #76a3ec;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  padding: 1rem;
 }
 
 li a:hover {
-   background-color: pink ;
-   color: red;
+  background-color: navy;
+  color: white;
 }
 h1 {
-    font-family: "roboto";
-    color: white; 
-    display: grid; 
-    justify-self: center;
-    font-size: 2rem;
-}   
+  font-family: "Lobster Two";
+  color: white;
+  display: grid;
+  justify-self: center;
+  font-size: 3em;
+}
+
+h2 {
+  display: grid;
+  justify-content: center;
+  font-family: "Roboto";
+  color: white;
+  display: grid;
+  justify-self: center;
+  font-size: 2rem;
+}
 
 .header > p {
-    font-size: 1.5em;
-    margin-left: 1em;
-  
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  color: white;
+  padding-bottom: 2em;
 }
 
 .mypic {
-    display: grid;
-    justify-self: center;
-    width: 50%;
-    border-style: groove;
-    border: .04em solid white;
+  display: grid;
+  justify-self: center;
+  width: 50%;
+  border-style: groove;
+  border: 0.04em solid white;
+}
+
+.mysensar-slides,
+.veality-slides {
+  display: grid;
+  margin-left: 0.5em;
+}
+
+@media only screen and (min-width: 550px) {
+  body,
+  main,
+  video,
+  .navbar,
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  body,
+  main,
+  video,
+  .navbar,
+  .header {
+    flex-direction: column;
+  }
 }
